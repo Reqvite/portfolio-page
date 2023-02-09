@@ -30,13 +30,7 @@ const theme = extendTheme(
         },
       }),
     },
-    components: {
-      Button: {
-        baseStyle: {
-          bg: "rgba(144, 144, 194, 0.59)",
-        },
-      },
-    },
+    components: {},
     colors: {
       accentColor: {
         100: "rgba(144, 144, 194, 0.59)",

@@ -80,7 +80,7 @@ const Home: FC = () => (
           Diligent and enthusiastic, I am interested in IT and everything in its
           orbit.
         </Text>
-        <Box justifyItems="center" my={4}>
+        <Box display="flex" justifyContent="center" my={4}>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -89,6 +89,7 @@ const Home: FC = () => (
               as={NextLink}
               href="/works"
               scroll={false}
+              bg="accentColor.100"
               variant="disabled"
             >
               My portfolio
