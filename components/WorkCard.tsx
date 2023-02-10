@@ -1,6 +1,7 @@
 import { workType } from "@/data/works";
-import { Card, CardBody, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import { Card, CardBody, Heading, Stack, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -13,17 +14,19 @@ const WorkCard: FC<workType> = ({ id, title, description, image }) => {
   }
 
   return (
-    <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }}>
+    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }}>
       <Link href={`/works/${id}`}>
         <Card maxW="sm" height="330" bg="accentColor.100">
           <CardBody>
             <Image
               src={image}
               alt="Green double couch with wooden legs"
-              borderRadius="lg"
               width="230"
-              height="120"
-              objectFit="cover"
+              height="98"
+              style={{
+                borderRadius: "10px",
+                height: "120px",
+              }}
             />
             <Stack mt="6" spacing="3">
               <Heading as="h4" size="md" textAlign="center">
@@ -36,7 +39,7 @@ const WorkCard: FC<workType> = ({ id, title, description, image }) => {
           </CardBody>
         </Card>
       </Link>
-    </motion.a>
+    </motion.div>
   );
 };
 

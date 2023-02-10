@@ -1,11 +1,10 @@
 import WorkInfo from "@/components/WorkInfo";
 import works, { workType } from "@/data/works";
+import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { FC } from "react";
 
-export const getServerSideProps = (context) => {
-  const { id } = context.query.id;
-
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const data = works.filter((work) => work.id === context.query.id);
 
   return {
@@ -15,7 +14,7 @@ export const getServerSideProps = (context) => {
   };
 };
 
-const Work: FC<workType> = ({ work }) => {
+const Work: FC<{ work: workType }> = ({ work }) => {
   return (
     <>
       <Head>

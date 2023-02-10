@@ -19,23 +19,12 @@ const Home: FC = () => (
       <title>Home</title>
     </Head>
     <Container>
-      <Box
-        borderRadius="lg"
-        mb={6}
-        p={3}
-        textAlign="center"
-        bg={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
-      >
-        <Text>
-          Hello, I&apos;m junior full-stack web developer based in Ukraine!
-        </Text>
-      </Box>
-      <Box display={{ md: "flex" }}>
+      <Box display={{ md: "flex" }} mt="80px">
         <Box flexGrow={1}>
           <Heading as="h2" mb={3}>
             Vladyslav Yachyn
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>Junior full-stack web developer</p>
         </Box>
         <Box
           flexShrink={0}
@@ -69,11 +58,18 @@ const Home: FC = () => (
         <Heading as="h3" fontSize={25} mb={5}>
           About
         </Heading>
-        <Text textIndent="20px">
-          I am a Junior full-stack developer and looking for full-time position.
-          Diligent and enthusiastic, I am interested in IT and everything in its
-          orbit.
-        </Text>
+        <Box
+          borderRadius="lg"
+          mb={6}
+          p={3}
+          textAlign="center"
+          bg={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
+        >
+          <Text textIndent="20px">
+            I&apos;m junior full-stack web developer based in Ukraine! I&apos;m
+            interested in IT and everything in its orbit.
+          </Text>
+        </Box>
         <Box display="flex" justifyContent="center" my={4}>
           <motion.button
             whileHover={{ scale: 1.05 }}

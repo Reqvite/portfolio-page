@@ -31,7 +31,7 @@ const Navbar: FC = () => {
       as="nav"
       w="100%"
       bg={useColorModeValue(
-        "rgba(250, 250, 250, 0.9)",
+        "rgba(250, 250, 250, 0.7)",
         "rgba(32, 32, 35, 0.9)"
       )}
       css={{ backdropFilter: "blur(4px)" }}

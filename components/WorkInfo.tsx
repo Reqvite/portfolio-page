@@ -23,7 +23,7 @@ const WorkInfo: FC<workType> = ({
   return (
     <Container>
       <Stack mt="6" spacing="3">
-        <Heading as="h4" size="md">
+        <Heading as="h4" size="md" mt="80px">
           {title}
         </Heading>
         <Text fontSize={16} textIndent="20px">
