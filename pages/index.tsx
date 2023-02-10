@@ -2,16 +2,8 @@ import {
   Box,
   Button,
   Container,
-  Flex,
   Heading,
-  Link,
-  List,
-  ListIcon,
-  ListItem,
-  Spacer,
   Text,
-  Tooltip,
-  UnorderedList,
   useColorModeValue,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
@@ -40,7 +32,9 @@ const Home: FC = () => (
       </Box>
       <Box display={{ md: "flex" }}>
         <Box flexGrow={1}>
-          <Heading as="h2">Vladyslav Yachyn</Heading>
+          <Heading as="h2" mb={3}>
+            Vladyslav Yachyn
+          </Heading>
           <p>Digital Craftsman ( Artist / Developer / Designer )</p>
         </Box>
         <Box
@@ -72,10 +66,10 @@ const Home: FC = () => (
         </Box>
       </Box>
       <Box>
-        <Heading as="h3" fontSize={25}>
+        <Heading as="h3" fontSize={25} mb={5}>
           About
         </Heading>
-        <Text>
+        <Text textIndent="20px">
           I am a Junior full-stack developer and looking for full-time position.
           Diligent and enthusiastic, I am interested in IT and everything in its
           orbit.

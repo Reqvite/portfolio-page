@@ -25,9 +25,7 @@ const theme = extendTheme(
           lineHeight: "tall",
         },
         a: {},
-        header: {
-          height: "82px",
-        },
+        main: { paddingTop: "80px", paddingBottom: "40px" },
       }),
     },
     components: {},

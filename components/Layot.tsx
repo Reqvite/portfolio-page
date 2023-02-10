@@ -10,21 +10,22 @@ type layoutProps = {
 };
 
 const variants = {
-  hidden: { opacity: 0, x: 0, y: 20 },
-  enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: -0, y: 20 },
+  hidden: { opacity: 0, x: 0, y: 15 },
+  enter: { opacity: 1, x: 0, y: 10 },
+  exit: { opacity: 0, x: -0, y: 30 },
 };
 
 const Layout: FC<layoutProps> = ({ children, router }) => (
-  <Flex height="100vh" flexDirection="column">
+  <Flex height="100vh" flexDirection="column" justifyContent="space-between">
     <Header />
     <AnimatePresence mode="wait">
       <motion.div
         key={router.route}
-        initial={{ y: 10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: -10, opacity: 0 }}
-        transition={{ duration: 0.2 }}
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={variants}
+        transition={{ duration: 0.35 }}
       >
         {children}
       </motion.div>

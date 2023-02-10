@@ -4,7 +4,7 @@ import { FC } from "react";
 
 const Footer: FC = () => (
   <Box as="footer" textAlign="center">
-    <Text>
+    <Text p={5}>
       &copy; {new Date().getFullYear()}{" "}
       <Link href="https://github.com/Reqvite" isExternal>
         Vladyslav Yachyn.
