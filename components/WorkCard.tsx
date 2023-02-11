@@ -4,7 +4,6 @@ import {
   CardBody,
   Heading,
   Stack,
-  Text,
   useMediaQuery,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";

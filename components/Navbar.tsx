@@ -5,6 +5,7 @@ import {
   Flex,
   Heading,
   HStack,
+  Text,
   useColorModeValue,
   useMediaQuery,
 } from "@chakra-ui/react";
@@ -14,6 +15,8 @@ import MobileMenu from "./MobileMenu";
 import NavbarItem from "./NavbarItem";
 import ToggleThemeButton from "./ToggleThemeButton";
 
+import NextLink from "next/link";
+import { motion } from "framer-motion";
 const Navbar: FC = () => {
   const [isLargerThan560] = useMediaQuery("(min-width: 560px)");
 
@@ -36,7 +39,13 @@ const Navbar: FC = () => {
         alignItems="center"
         justifyContent="space-between"
       >
-        <Heading as="h1">Portfolio</Heading>
+        <Heading as="h1">
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.95 }}>
+            <Text as={NextLink} href="/" p={2} borderRadius={5}>
+              Portfolio
+            </Text>
+          </motion.div>
+        </Heading>
         {isLargerThan560 ? (
           <>
             <HStack fontSize={16} ml={10} fontWeight={700} p={5}>

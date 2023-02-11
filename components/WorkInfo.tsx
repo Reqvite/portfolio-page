@@ -1,8 +1,6 @@
 import { workType } from "@/data/works";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
-  Card,
-  CardBody,
   Container,
   Heading,
   Image,
@@ -12,7 +10,6 @@ import {
   Badge,
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   Button,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";

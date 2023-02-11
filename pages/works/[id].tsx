@@ -1,5 +1,6 @@
 import WorkInfo from "@/components/WorkInfo";
 import works, { workType } from "@/data/works";
+import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { FC } from "react";
 
@@ -15,7 +16,13 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async (context: any) => {
+export const getStaticProps: GetServerSideProps = async (context: any) => {
+  if (!context.params) {
+    return {
+      notFound: true,
+    };
+  }
+
   const data = works.filter((work) => work.id === context.params.id);
 
   if (!data) {
