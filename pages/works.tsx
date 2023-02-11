@@ -54,6 +54,9 @@ const Works: FC = () => {
           {buttons.map(({ title, filter }) => (
             <Button
               key={title}
+              as={motion.button}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => setFilter(filter)}
               mr={2}
               bg="accentColor.100"

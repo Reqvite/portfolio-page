@@ -79,7 +79,6 @@ const Home: FC = () => (
               as={NextLink}
               href="/works"
               scroll={false}
-              bg="accentColor.100"
               variant="disabled"
             >
               My portfolio

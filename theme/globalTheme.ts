@@ -28,7 +28,13 @@ const theme = extendTheme(
         main: { padding: "20px" },
       }),
     },
-    components: {},
+    components: {
+      Button: {
+        baseStyle: {
+          backgroundColor: "accentColor.100",
+        },
+      },
+    },
     colors: {
       accentColor: {
         100: "rgba(144, 144, 194, 0.59)",

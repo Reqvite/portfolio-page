@@ -1,4 +1,5 @@
 import { workType } from "@/data/works";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
   Card,
   CardBody,
@@ -9,7 +10,13 @@ import {
   Text,
   Link,
   Badge,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Button,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 import { FC } from "react";
 
 const WorkInfo: FC<workType> = ({
@@ -20,12 +27,33 @@ const WorkInfo: FC<workType> = ({
   page,
   image,
 }) => {
+  const router = useRouter();
   return (
-    <Container>
+    <Container mt="80px">
       <Stack mt="6" spacing="3">
-        <Heading as="h4" size="md" mt="80px">
-          {title}
-        </Heading>
+        <Breadcrumb
+          spacing="8px"
+          separator={<ChevronRightIcon color="gray.500" />}
+        >
+          <BreadcrumbItem>
+            <Button
+              as={motion.button}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              variant="disabled"
+              onClick={() => router.back()}
+            >
+              Back
+            </Button>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem isCurrentPage>
+            <Heading as="h4" size="md">
+              {title}
+            </Heading>
+          </BreadcrumbItem>
+        </Breadcrumb>
+
         <Text fontSize={16} textIndent="20px">
           {fullDescription}
         </Text>
