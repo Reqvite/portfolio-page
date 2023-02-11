@@ -12,7 +12,7 @@ import Image from "next/image";
 import { FC } from "react";
 import { motion } from "framer-motion";
 import SkillsBox from "@/components/SkillsBox";
-
+import profilePhoto from "../public/images/profile/profile.png";
 const Home: FC = () => (
   <>
     <Head>
@@ -43,8 +43,8 @@ const Home: FC = () => (
             overflow="hidden"
           >
             <Image
-              src="/IMG_3825.PNG"
-              quality={100}
+              src={profilePhoto}
+              quality={75}
               alt="Profile image"
               width={100}
               height={100}

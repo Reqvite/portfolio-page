@@ -1,10 +1,10 @@
 export const buttons = [
   {
-    title: "Team project",
+    title: "Team projects",
     filter: "Team",
   },
   {
-    title: "Pet-project",
+    title: "Pet-projects",
     filter: "Pet",
   },
   {

@@ -1,3 +1,12 @@
+import phonebookImg from "../public/images/works/Phonebook.png";
+import realtimechatImg from "../public/images/works/Realtimechat.png";
+import filmotekaImg from "../public/images/works/Filmoteka.png";
+import icecreamImg from "../public/images/works/Icecream.png";
+import barbershopImg from "../public/images/works/Barbershop.png";
+import imagesearchImg from "../public/images/works/imagesearch.png";
+import socialappImg from "../public/images/works/Social-app.png";
+import webstudioImg from "../public/images/works/Webstudio.png";
+
 export type workType = {
   id: string;
   title: string;
@@ -6,7 +15,7 @@ export type workType = {
   technologies: string;
   source: string;
   page: string;
-  image: string;
+  image: any;
 };
 
 const works: workType[] = [
@@ -20,7 +29,7 @@ const works: workType[] = [
     technologies: "React (Hooks, Routers, Redux, Redux Toolkit)",
     source: "https://github.com/Reqvite/goit-react-hw-08-phonebook",
     page: "https://reqvite.github.io/goit-react-hw-08-phonebook/",
-    image: "/images/works/Phonebook.png",
+    image: phonebookImg,
   },
   {
     id: "social-network",
@@ -32,7 +41,7 @@ const works: workType[] = [
     technologies: "React Native (Hooks, Routers, Redux, Redux Toolkit), Expo",
     source: "https://github.com/Reqvite/react-native-social-media-app",
     page: "https://expo.dev/@reqvite/react-native-pr",
-    image: "/images/works/Social-app.png",
+    image: socialappImg,
   },
   {
     id: "real-time-chat",
@@ -44,19 +53,19 @@ const works: workType[] = [
     technologies: "React (Hooks, Routers)",
     source: "https://github.com/Reqvite/realtime-chat-react",
     page: "https://real-time-chat-01.netlify.app/chat-room",
-    image: "/images/works/Realtimechat.png",
+    image: realtimechatImg,
   },
   {
     id: "filmoteka",
     title: "Filmoteka",
     description:
-      "Application for  searching  andchoosing a movie with user registration and database using Firebase.",
+      "Application for  searching  and choosing a movie with user registration and database using Firebase.",
     fullDescription:
-      "Application for  searching  andchoosing a movie with user registration and database using Firebase.Role: Team lead.Here is what I did in this project: initialized the project and prepared all the files for the team to work. Added registration/login feature on the site, modal windows with detailed information about films, team review code, resolve merge conflicts on github.",
+      "Application for  searching  and choosing a movie with user registration and database using Firebase.Role: Team lead.Here is what I did in this project: initialized the project and prepared all the files for the team to work. Added registration/login feature on the site, modal windows with detailed information about films, team review code, resolve merge conflicts on github.",
     technologies: "HTML, SASS, JS, REST API, AJAX, Parcel",
     source: "https://github.com/Reqvite/Filmoteka",
     page: "https://reqvite.github.io/Filmoteka/",
-    image: "/images/works/Filmoteka.png",
+    image: filmotekaImg,
   },
   {
     id: "image-search",
@@ -67,7 +76,7 @@ const works: workType[] = [
     technologies: "HTML, SCSS, JS",
     source: "https://github.com/Reqvite/goit-js-hw-11",
     page: "https://reqvite.github.io/goit-js-hw-11/",
-    image: "/images/works/imagesearch.png",
+    image: imagesearchImg,
   },
   {
     id: "barbershop",
@@ -79,7 +88,7 @@ const works: workType[] = [
     technologies: "HTML, SCSS, JS",
     source: "https://github.com/Reqvite/barbershop",
     page: "https://reqvite.github.io/barbershop/",
-    image: "/images/works/Barbershop.png",
+    image: barbershopImg,
   },
   {
     id: "icecream",
@@ -91,7 +100,7 @@ const works: workType[] = [
     technologies: "HTML, Parcel, SCSS, JS",
     source: "https://github.com/Reqvite/team-project-1",
     page: "https://reqvite.github.io/team-project-1/",
-    image: "/images/works/Icecream.png",
+    image: icecreamImg,
   },
   {
     id: "webstudio",
@@ -103,7 +112,7 @@ const works: workType[] = [
     technologies: "HTML, SCSS, JS",
     source: "https://github.com/Reqvite/goit-markup-hw-08",
     page: "https://reqvite.github.io/goit-markup-hw-08/",
-    image: "/images/works/Webstudio.png",
+    image: webstudioImg,
   },
 ];
 

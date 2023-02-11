@@ -73,11 +73,12 @@ const WorkInfo: FC<workType> = ({
           {technologies}
         </Text>
         <Image
-          src={image}
+          src={image.src}
           alt="Website preview"
           borderRadius="5px"
           width="500"
           height="300"
+          placeholder="blur"
           objectFit="cover"
         />
       </Stack>

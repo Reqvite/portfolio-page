@@ -30,9 +30,10 @@ const WorkCard: FC<workType> = ({ id, title, description, image }) => {
               src={image}
               alt="Green double couch with wooden legs"
               width="250"
-              height="130"
+              placeholder="blur"
               style={{
                 borderRadius: "10px",
+                height: "120px",
               }}
             />
             <Stack mt="6" spacing="3">
