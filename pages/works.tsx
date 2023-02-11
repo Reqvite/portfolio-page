@@ -2,13 +2,21 @@ import WorkCard from "@/components/WorkCard";
 import { buttons } from "@/data/filter";
 import { variants } from "@/data/mainAnimationVariant";
 import works, { workType } from "@/data/works";
-import { Button, Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
+import {
+  Button,
+  Container,
+  Flex,
+  Heading,
+  SimpleGrid,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Head from "next/head";
 import { FC, useState } from "react";
 
 const Works: FC = () => {
   const [filter, setFilter] = useState("");
+  const [isLargerThan560] = useMediaQuery("(min-width: 560px)");
 
   const renderFilterList = () => {
     const filterList = works.filter(({ fullDescription }) =>
@@ -48,7 +56,11 @@ const Works: FC = () => {
             variants={variants}
             transition={{ duration: 0.35 }}
           >
-            <SimpleGrid columns={2} spacing={10}>
+            <SimpleGrid
+              columns={isLargerThan560 ? 2 : 1}
+              spacing={10}
+              justifyItems="center"
+            >
               {renderFilterList().map((work: workType) => (
                 <WorkCard key={work.id} {...work} />
               ))}

@@ -1,30 +1,22 @@
+import { navigation } from "@/data/navigation";
 import {
   Box,
-  Button,
   Container,
+  Flex,
   Heading,
   HStack,
-  useColorMode,
   useColorModeValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 
 import { FC } from "react";
-import Logo from "./Logo";
+import MobileMenu from "./MobileMenu";
 import NavbarItem from "./NavbarItem";
 import ToggleThemeButton from "./ToggleThemeButton";
 
-type Page = {
-  id: number;
-  title: string;
-  path: string;
-};
-
-const navigation: Page[] = [
-  { id: 1, title: "Home", path: "/" },
-  { id: 2, title: "Works", path: "/works" },
-];
-
 const Navbar: FC = () => {
+  const [isLargerThan560] = useMediaQuery("(min-width: 560px)");
+
   return (
     <Box
       position="fixed"
@@ -37,16 +29,31 @@ const Navbar: FC = () => {
       css={{ backdropFilter: "blur(4px)" }}
       zIndex={2}
     >
-      <Container display="flex" p={2} maxW="container.md" alignItems="center">
-        <Heading as="h1">{/* <Logo/> */}Portfolio</Heading>
-        <HStack fontSize={16} ml={10} fontWeight={700} p={5}>
-          {navigation.map(({ id, title, path }) => (
-            <NavbarItem key={id} title={title} path={path} />
-          ))}
-        </HStack>
-        <Box ml="auto">
-          <ToggleThemeButton />
-        </Box>
+      <Container
+        display="flex"
+        p={2}
+        maxW="container.md"
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <Heading as="h1">Portfolio</Heading>
+        {isLargerThan560 ? (
+          <>
+            <HStack fontSize={16} ml={10} fontWeight={700} p={5}>
+              {navigation.map(({ id, title, path }) => (
+                <NavbarItem key={id} title={title} path={path} />
+              ))}
+            </HStack>
+            <Box ml="auto">
+              <ToggleThemeButton />
+            </Box>
+          </>
+        ) : (
+          <Flex>
+            <ToggleThemeButton />
+            <MobileMenu />
+          </Flex>
+        )}
       </Container>
     </Box>
   );
