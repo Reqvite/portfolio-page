@@ -14,6 +14,22 @@ import { AnimatePresence, motion } from "framer-motion";
 import Head from "next/head";
 import { FC, useState } from "react";
 
+export const getStaticProps = async () => {
+  const data = works;
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      work: data,
+    },
+  };
+};
+
 const Works: FC = () => {
   const [filter, setFilter] = useState("");
   const [isLargerThan560] = useMediaQuery("(min-width: 560px)");

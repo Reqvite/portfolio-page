@@ -39,7 +39,7 @@ const WorkCard: FC<workType> = ({ id, title, description, image }) => {
               height="98"
               style={{
                 borderRadius: "10px",
-                height: "120px",
+                height: "auto",
               }}
             />
             <Stack mt="6" spacing="3">
