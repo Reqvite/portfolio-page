@@ -25,17 +25,18 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      work: data,
+      works: data,
     },
   };
 };
 
-const Works: FC = () => {
+const Works: FC<{ works: workType[] }> = ({ works }) => {
+  const [allWorks, setAllWorks] = useState<workType[]>(works);
   const [filter, setFilter] = useState("");
   const [isLargerThan560] = useMediaQuery("(min-width: 560px)");
 
   const renderFilterList = () => {
-    const filterList = works.filter(({ fullDescription }) =>
+    const filterList = allWorks.filter(({ fullDescription }) =>
       fullDescription.includes(filter)
     );
     return filterList;
