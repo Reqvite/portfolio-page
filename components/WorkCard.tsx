@@ -26,9 +26,9 @@ const WorkCard: FC<workType> = ({ id, title, description, image }) => {
             overflow="hidden"
           >
             <Image
-              quality={100}
+              quality={75}
               src={image}
-              alt="Green double couch with wooden legs"
+              alt="Work preview"
               width="250"
               placeholder="blur"
               style={{
