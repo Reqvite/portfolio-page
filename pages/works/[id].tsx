@@ -1,5 +1,5 @@
 import WorkInfo from "@/components/WorkInfo";
-import works, { workType } from "@/data/works";
+import works, { WorkI } from "@/data/works";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { FC } from "react";
@@ -38,7 +38,7 @@ export const getStaticProps: GetServerSideProps = async (context: any) => {
   };
 };
 
-const Work: FC<{ work: workType }> = ({ work }) => {
+const Work: FC<{ work: WorkI }> = ({ work }) => {
   return (
     <>
       <Head>

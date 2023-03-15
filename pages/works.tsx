@@ -1,7 +1,7 @@
 import WorkCard from "@/components/WorkCard";
 import { buttons } from "@/data/filter";
 import { variants } from "@/data/mainAnimationVariant";
-import works, { workType } from "@/data/works";
+import works, { WorkI } from "@/data/works";
 import {
   Button,
   Container,
@@ -30,8 +30,8 @@ export const getStaticProps = async () => {
   };
 };
 
-const Works: FC<{ works: workType[] }> = ({ works }) => {
-  const [allWorks, setAllWorks] = useState<workType[]>(works);
+const Works: FC<{ works: WorkI[] }> = ({ works }) => {
+  const [allWorks, setAllWorks] = useState<WorkI[]>(works);
   const [filter, setFilter] = useState("");
   const [isLargerThan560] = useMediaQuery("(min-width: 560px)");
 
@@ -81,7 +81,7 @@ const Works: FC<{ works: workType[] }> = ({ works }) => {
               spacing={10}
               justifyItems="center"
             >
-              {renderFilterList().map((work: workType) => (
+              {renderFilterList().map((work: WorkI) => (
                 <WorkCard key={work.id} {...work} />
               ))}
             </SimpleGrid>

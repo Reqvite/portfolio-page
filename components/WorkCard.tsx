@@ -1,4 +1,4 @@
-import { workType } from "@/data/works";
+import { WorkI } from "@/data/works";
 import {
   Card,
   CardBody,
@@ -11,7 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
-const WorkCard: FC<workType> = ({ id, title, description, image }) => {
+const WorkCard: FC<WorkI> = ({ id, title, description, image }) => {
   const [isLargerThan560] = useMediaQuery("(min-width: 560px)");
 
   return (

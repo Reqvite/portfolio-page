@@ -1,4 +1,4 @@
-import { workType } from "@/data/works";
+import { WorkI } from "@/data/works";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
   Container,
@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { FC } from "react";
 
-const WorkInfo: FC<workType> = ({
+const WorkInfo: FC<WorkI> = ({
   title,
   fullDescription,
   technologies,

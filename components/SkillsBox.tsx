@@ -42,15 +42,17 @@ const SkillsBox = () => (
       <List spacing={3}>
         <ListItem>
           <ListIcon as={CheckIcon} color="green.500" />
-          React native
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckIcon} color="green.500" />
           Redux
         </ListItem>
         <ListItem>
           <ListIcon as={CheckIcon} color="green.500" />
           Node.js
+        </ListItem>
+        <ListItem>
+          <Tooltip label="In progress" aria-label="Typescript knowledge">
+            <ListIcon as={SettingsIcon} color="yellow.500" />
+          </Tooltip>
+          React native
         </ListItem>
         <ListItem>
           <Tooltip label="In progress" aria-label="Typescript knowledge">

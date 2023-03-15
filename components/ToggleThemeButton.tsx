@@ -3,7 +3,7 @@ import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FC } from "react";
 
-const ToggleThemeButton: FC<any> = () => {
+const ToggleThemeButton: FC = () => {
   const { toggleColorMode } = useColorMode();
 
   return (

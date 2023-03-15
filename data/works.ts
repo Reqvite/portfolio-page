@@ -7,7 +7,7 @@ import imagesearchImg from "../public/images/works/imagesearch.png";
 import socialappImg from "../public/images/works/Social-app.png";
 import webstudioImg from "../public/images/works/Webstudio.png";
 
-export type workType = {
+export interface WorkI {
   id: string;
   title: string;
   description: string;
@@ -16,9 +16,9 @@ export type workType = {
   source: string;
   page: string;
   image: any;
-};
+}
 
-const works: workType[] = [
+const works: WorkI[] = [
   {
     id: "phonebook",
     title: "Phonebook",
@@ -44,18 +44,6 @@ const works: workType[] = [
     image: socialappImg,
   },
   {
-    id: "real-time-chat",
-    title: "Real time chat",
-    description:
-      "Real-time chat using google authentication and firebase to store messages.",
-    fullDescription:
-      "Pet-project.Real-time chat using google authentication and firebase to store messages.",
-    technologies: "React (Hooks, Routers)",
-    source: "https://github.com/Reqvite/realtime-chat-react",
-    page: "https://real-time-chat-01.netlify.app/chat-room",
-    image: realtimechatImg,
-  },
-  {
     id: "filmoteka",
     title: "Filmoteka",
     description:
@@ -66,6 +54,18 @@ const works: workType[] = [
     source: "https://github.com/Reqvite/Filmoteka",
     page: "https://reqvite.github.io/Filmoteka/",
     image: filmotekaImg,
+  },
+  {
+    id: "real-time-chat",
+    title: "Real time chat",
+    description:
+      "Real-time chat using google authentication and firebase to store messages.",
+    fullDescription:
+      "Pet-project.Real-time chat using google authentication and firebase to store messages.",
+    technologies: "React (Hooks, Routers)",
+    source: "https://github.com/Reqvite/realtime-chat-react",
+    page: "https://real-time-chat-01.netlify.app/chat-room",
+    image: realtimechatImg,
   },
   {
     id: "image-search",
