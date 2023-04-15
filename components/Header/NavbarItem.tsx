@@ -1,8 +1,8 @@
-import { Link, useMediaQuery } from "@chakra-ui/react";
+import { FC } from "react";
 import { motion } from "framer-motion";
+import { Link, useMediaQuery } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import { FC } from "react";
 
 type NavbarItemType = {
   title: string;

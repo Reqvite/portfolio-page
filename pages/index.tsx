@@ -16,7 +16,6 @@ import profilePhoto from "../public/images/profile/profile.png";
 const Home: FC = () => (
   <>
     <Head>
-      <link rel="icon" href="/images/favicon.png" />
       <title>Home</title>
     </Head>
     <Container>

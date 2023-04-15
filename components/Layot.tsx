@@ -1,13 +1,13 @@
-import { variants } from "@/data/mainAnimationVariant";
+import { FC, ReactNode } from "react";
 import { Flex } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FC, ReactNode } from "react";
 import Footer from "./Footer";
 import Header from "./Header/Header";
+import { variants } from "@/data/mainAnimationVariant";
 
 type layoutProps = {
   children: ReactNode;
-  router: any;
+  router: string;
 };
 
 const Layout: FC<layoutProps> = ({ children, router }) => (

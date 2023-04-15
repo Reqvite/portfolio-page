@@ -21,6 +21,7 @@ export interface WorkI {
   image: StaticImageData;
   backendSource?: string;
   bigPage?: boolean;
+  teamProject: boolean;
 }
 
 const works: WorkI[] = [
@@ -38,6 +39,7 @@ const works: WorkI[] = [
     page: "https://so-yummy.netlify.app",
     image: soYummyImg,
     bigPage: true,
+    teamProject: true,
   },
   {
     id: "phonebook",
@@ -50,6 +52,7 @@ const works: WorkI[] = [
     source: "https://github.com/Reqvite/goit-react-hw-08-phonebook",
     page: "https://reqvite.github.io/goit-react-hw-08-phonebook/",
     image: phonebookImg,
+    teamProject: false,
   },
   {
     id: "social-network",
@@ -62,6 +65,7 @@ const works: WorkI[] = [
     source: "https://github.com/Reqvite/react-native-social-media-app",
     page: "https://expo.dev/@reqvite/react-native-pr",
     image: socialappImg,
+    teamProject: false,
   },
   {
     id: "filmoteka",
@@ -74,6 +78,7 @@ const works: WorkI[] = [
     source: "https://github.com/Reqvite/Filmoteka",
     page: "https://reqvite.github.io/Filmoteka/",
     image: filmotekaImg,
+    teamProject: true,
   },
   {
     id: "real-time-chat",
@@ -86,6 +91,7 @@ const works: WorkI[] = [
     source: "https://github.com/Reqvite/realtime-chat-react",
     page: "https://real-time-chat-01.netlify.app/chat-room",
     image: realtimechatImg,
+    teamProject: false,
   },
   {
     id: "image-search",
@@ -97,6 +103,7 @@ const works: WorkI[] = [
     source: "https://github.com/Reqvite/goit-js-hw-11",
     page: "https://reqvite.github.io/goit-js-hw-11/",
     image: imagesearchImg,
+    teamProject: false,
   },
   {
     id: "barbershop",
@@ -109,6 +116,7 @@ const works: WorkI[] = [
     source: "https://github.com/Reqvite/barbershop",
     page: "https://reqvite.github.io/barbershop/",
     image: barbershopImg,
+    teamProject: false,
   },
   {
     id: "icecream",
@@ -121,6 +129,7 @@ const works: WorkI[] = [
     source: "https://github.com/Reqvite/team-project-1",
     page: "https://reqvite.github.io/team-project-1/",
     image: icecreamImg,
+    teamProject: true,
   },
   {
     id: "webstudio",
@@ -133,6 +142,7 @@ const works: WorkI[] = [
     source: "https://github.com/Reqvite/goit-markup-hw-08",
     page: "https://reqvite.github.io/goit-markup-hw-08/",
     image: webstudioImg,
+    teamProject: false,
   },
 ];
 

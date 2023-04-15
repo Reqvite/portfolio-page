@@ -1,4 +1,6 @@
-import { navigation } from "@/data/navigation";
+import { FC } from "react";
+import NextLink from "next/link";
+import { motion } from "framer-motion";
 import {
   Box,
   Container,
@@ -9,14 +11,11 @@ import {
   useColorModeValue,
   useMediaQuery,
 } from "@chakra-ui/react";
-
-import { FC } from "react";
 import MobileMenu from "../ui/MobileMenu";
 import NavbarItem from "./NavbarItem";
 import ToggleThemeButton from "../ui/ToggleThemeButton";
+import { navigation } from "@/data/navigation";
 
-import NextLink from "next/link";
-import { motion } from "framer-motion";
 const Navbar: FC = () => {
   const [isLargerThan560] = useMediaQuery("(min-width: 560px)");
 

@@ -23,6 +23,7 @@ const theme = extendTheme(
           fontWeight: 500,
           color: props.colorMode === "dark" ? "white" : "black",
           lineHeight: "tall",
+          transition: "background-color 0ms linear, color 200ms linear",
         },
         a: {},
         main: { padding: "20px" },
@@ -41,7 +42,11 @@ const theme = extendTheme(
       },
     },
   },
-  config
+  {
+    config: {
+      disableTransitionOnChange: false,
+    },
+  }
 );
 
 export default theme;

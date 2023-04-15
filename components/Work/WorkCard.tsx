@@ -1,17 +1,26 @@
-import { WorkI } from "@/data/works";
+import { FC } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import {
+  Box,
   Card,
   CardBody,
+  Flex,
   Heading,
   Stack,
   useMediaQuery,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import { FC } from "react";
+import { WorkI } from "@/data/works";
+import { HiUser, HiUserGroup } from "react-icons/hi2";
 
-const WorkCard: FC<WorkI> = ({ id, title, description, image }) => {
+const WorkCard: FC<WorkI> = ({
+  id,
+  title,
+  description,
+  image,
+  teamProject,
+}) => {
   const [isLargerThan560] = useMediaQuery("(min-width: 560px)");
 
   return (
@@ -38,10 +47,19 @@ const WorkCard: FC<WorkI> = ({ id, title, description, image }) => {
               }}
             />
             <Stack mt="6" spacing="3">
-              <Heading as="h4" size="md" textAlign="center">
-                {title}
-              </Heading>
-              <div
+              <Flex alignSelf="center" alignItems="center">
+                <Heading as="h4" size="md" textAlign="center">
+                  {title}
+                </Heading>
+                <Box ml="5px">
+                  {teamProject ? (
+                    <HiUserGroup size={18} />
+                  ) : (
+                    <HiUser size={18} />
+                  )}
+                </Box>
+              </Flex>
+              <p
                 style={{
                   display: "-webkit-box",
                   overflow: "hidden",
@@ -54,7 +72,7 @@ const WorkCard: FC<WorkI> = ({ id, title, description, image }) => {
                 }}
               >
                 {description}
-              </div>
+              </p>
             </Stack>
           </CardBody>
         </Card>

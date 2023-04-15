@@ -1,10 +1,10 @@
-import { navigation } from "@/data/navigation";
+import { FC } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { IconButton, Menu, MenuButton, MenuList } from "@chakra-ui/react";
-
 import NavbarItem from "../Header/NavbarItem";
+import { navigation } from "@/data/navigation";
 
-const MobileMenu = () => {
+const MobileMenu: FC = () => {
   return (
     <Menu>
       <MenuButton

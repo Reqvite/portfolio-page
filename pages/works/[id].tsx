@@ -42,7 +42,6 @@ const Work: FC<{ work: WorkI }> = ({ work }) => {
   return (
     <>
       <Head>
-        <link rel="icon" href="/images/favicon.png" />
         <title>{work.title}</title>
       </Head>
       <WorkInfo {...work} />

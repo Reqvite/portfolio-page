@@ -1,4 +1,6 @@
-import { WorkI } from "@/data/works";
+import { FC } from "react";
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
   Container,
@@ -12,9 +14,7 @@ import {
   BreadcrumbItem,
   Button,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import { useRouter } from "next/router";
-import { FC } from "react";
+import { WorkI } from "@/data/works";
 
 const WorkInfo: FC<WorkI> = ({
   title,
@@ -58,20 +58,20 @@ const WorkInfo: FC<WorkI> = ({
           {fullDescription}
         </Text>
 
-        <Link href={page}>
+        <Link href={page} target="_blank">
           <Badge bg="accentColor.100" mr={2}>
             Website:
           </Badge>
           {page}
         </Link>
-        <Link href={source}>
+        <Link href={source} target="_blank">
           <Badge bg="accentColor.100" mr={2}>
             Source:
           </Badge>
           {source}
         </Link>
         {bigPage && (
-          <Link href={backendSource}>
+          <Link href={backendSource} target="_blank">
             <Badge bg="accentColor.100" mr={2}>
               Backend source:
             </Badge>

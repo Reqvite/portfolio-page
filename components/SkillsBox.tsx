@@ -1,3 +1,4 @@
+import { FC } from "react";
 import {
   Box,
   Flex,
@@ -10,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { CheckIcon, SettingsIcon } from "@chakra-ui/icons";
 
-const SkillsBox = () => (
+const SkillsBox: FC = () => (
   <Box>
     <Heading as="h3" fontSize={25}>
       Skills
