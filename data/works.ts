@@ -6,6 +6,9 @@ import barbershopImg from "../public/images/works/Barbershop.png";
 import imagesearchImg from "../public/images/works/imagesearch.png";
 import socialappImg from "../public/images/works/Social-app.png";
 import webstudioImg from "../public/images/works/Webstudio.png";
+import soYummyImg from "../public/images/works/So-yummy-preview.jpg";
+
+import { StaticImageData } from "next/image";
 
 export interface WorkI {
   id: string;
@@ -15,10 +18,27 @@ export interface WorkI {
   technologies: string;
   source: string;
   page: string;
-  image: any;
+  image: StaticImageData;
+  backendSource?: string;
+  bigPage?: boolean;
 }
 
 const works: WorkI[] = [
+  {
+    id: "so-yummy",
+    title: "So Yummy",
+    description:
+      "Application where you can discover a vast collection of culinary delights that will help you expand your cooking skills and impress your loved ones.",
+    fullDescription:
+      "Application where you can discover a vast collection of culinary delights that will help you expand your cooking skills and impress your loved ones. Role: Team lead. Here is what I did in this project: initialized the project and prepared all the files for the team to work. Backend - auth(login, register, logout, currentUser, googleAuth), ownRecipes(add, delete, get list), shopping-list(add, delete, get list). Frontend - WelcomePage, RegisterPage, SigninPage, ShoppingListPage, RecipePage, header (update user modal, dark theme). Code review, resolve merge conflicts on github.",
+    technologies:
+      "Frontend - HTML/CSS, React, React-dom, Redux Toolkit, Axios, Formik, Yup, Toastify, MUI, Styled Components. Backend - Node.js, Express,MongoDB, Mongoose, Joi, Cloudinary, Swagger",
+    source: "https://github.com/Reqvite/so-yummy-project",
+    backendSource: "https://github.com/Reqvite/so-yummy-backend",
+    page: "https://so-yummy.netlify.app",
+    image: soYummyImg,
+    bigPage: true,
+  },
   {
     id: "phonebook",
     title: "Phonebook",
@@ -49,7 +69,7 @@ const works: WorkI[] = [
     description:
       "Application for  searching  and choosing a movie with user registration and database using Firebase.",
     fullDescription:
-      "Application for  searching  and choosing a movie with user registration and database using Firebase.Role: Team lead.Here is what I did in this project: initialized the project and prepared all the files for the team to work. Added registration/login feature on the site, modal windows with detailed information about films, team review code, resolve merge conflicts on github.",
+      "Application for  searching  and choosing a movie with user registration and database using Firebase.Role: Team lead.Here is what I did in this project: initialized the project and prepared all the files for the team to work. Added registration/login feature on the site, modal windows with detailed information about films, code review, resolve merge conflicts on github.",
     technologies: "HTML, SASS, JS, REST API, AJAX, Parcel",
     source: "https://github.com/Reqvite/Filmoteka",
     page: "https://reqvite.github.io/Filmoteka/",
@@ -96,7 +116,7 @@ const works: WorkI[] = [
     description:
       "Ice company website with responsive layout,burger menu, modal windows and attractive design. ",
     fullDescription:
-      "Ice company website with responsive layout,burger menu, modal windows and attractive design. Role: Team lead.Here is what I did in this project: initialized the project and prepared all the files for the team to work. Added about,gallery sections, team review code, resolve merge conflicts on github.",
+      "Ice company website with responsive layout,burger menu, modal windows and attractive design. Role: Team lead.Here is what I did in this project: initialized the project and prepared all the files for the team to work. Added about,gallery sections, code review, resolve merge conflicts on github.",
     technologies: "HTML, Parcel, SCSS, JS",
     source: "https://github.com/Reqvite/team-project-1",
     page: "https://reqvite.github.io/team-project-1/",

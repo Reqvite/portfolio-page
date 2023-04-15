@@ -26,7 +26,7 @@ const WorkCard: FC<WorkI> = ({ id, title, description, image }) => {
             overflow="hidden"
           >
             <Image
-              quality={75}
+              quality={90}
               src={image}
               alt="Work preview"
               width="250"
@@ -34,6 +34,7 @@ const WorkCard: FC<WorkI> = ({ id, title, description, image }) => {
               style={{
                 borderRadius: "10px",
                 height: "120px",
+                objectFit: "cover",
               }}
             />
             <Stack mt="6" spacing="3">

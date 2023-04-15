@@ -2,7 +2,7 @@ import { navigation } from "@/data/navigation";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { IconButton, Menu, MenuButton, MenuList } from "@chakra-ui/react";
 
-import NavbarItem from "./NavbarItem";
+import NavbarItem from "../Header/NavbarItem";
 
 const MobileMenu = () => {
   return (

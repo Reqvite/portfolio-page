@@ -11,9 +11,9 @@ import {
 } from "@chakra-ui/react";
 
 import { FC } from "react";
-import MobileMenu from "./MobileMenu";
+import MobileMenu from "../ui/MobileMenu";
 import NavbarItem from "./NavbarItem";
-import ToggleThemeButton from "./ToggleThemeButton";
+import ToggleThemeButton from "../ui/ToggleThemeButton";
 
 import NextLink from "next/link";
 import { motion } from "framer-motion";

@@ -1,4 +1,4 @@
-import WorkInfo from "@/components/WorkInfo";
+import WorkInfo from "@/components/Work/WorkInfo";
 import works, { WorkI } from "@/data/works";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
@@ -42,7 +42,8 @@ const Work: FC<{ work: WorkI }> = ({ work }) => {
   return (
     <>
       <Head>
-        <title>Work</title>
+        <link rel="icon" href="/images/favicon.png" />
+        <title>{work.title}</title>
       </Head>
       <WorkInfo {...work} />
     </>

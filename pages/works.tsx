@@ -1,4 +1,4 @@
-import WorkCard from "@/components/WorkCard";
+import WorkCard from "@/components/Work/WorkCard";
 import { buttons } from "@/data/filter";
 import { variants } from "@/data/mainAnimationVariant";
 import works, { WorkI } from "@/data/works";
