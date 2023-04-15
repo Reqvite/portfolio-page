@@ -91,7 +91,7 @@ const WorkInfo: FC<WorkI> = ({
           width="500"
           height="300"
           placeholder="blur"
-          objectFit="contain"
+          objectFit="cover"
           cursor="pointer"
           onClick={() => window.open(image.src, "_blank")}
         />
