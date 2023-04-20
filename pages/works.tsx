@@ -32,7 +32,7 @@ export const getStaticProps = async () => {
 
 const Works: FC<{ works: WorkI[] }> = ({ works }) => {
   const [allWorks] = useState<WorkI[]>(works);
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState<any>("all");
   const [isLargerThan560] = useMediaQuery("(min-width: 560px)");
 
   const renderFilterList = () => {
