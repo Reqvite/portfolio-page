@@ -31,15 +31,19 @@ export const getStaticProps = async () => {
 };
 
 const Works: FC<{ works: WorkI[] }> = ({ works }) => {
-  const [allWorks, setAllWorks] = useState<WorkI[]>(works);
-  const [filter, setFilter] = useState("");
+  const [allWorks] = useState<WorkI[]>(works);
+  const [filter, setFilter] = useState<boolean | string>("all");
   const [isLargerThan560] = useMediaQuery("(min-width: 560px)");
 
   const renderFilterList = () => {
-    const filterList = allWorks.filter(({ fullDescription }) =>
-      fullDescription.includes(filter)
-    );
-    return filterList;
+    if (typeof filter === "string") {
+      return allWorks;
+    } else {
+      const filterList = allWorks.filter(
+        ({ teamProject }) => teamProject === filter
+      );
+      return filterList;
+    }
   };
 
   return (

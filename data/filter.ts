@@ -1,14 +1,14 @@
 export const buttons = [
   {
     title: "Team projects",
-    filter: "Team",
+    filter: true,
   },
   {
     title: "Pet-projects",
-    filter: "Pet",
+    filter: false,
   },
   {
     title: "All",
-    filter: "",
+    filter: "all",
   },
 ];

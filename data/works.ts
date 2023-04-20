@@ -7,6 +7,7 @@ import imagesearchImg from "../public/images/works/imagesearch.png";
 import socialappImg from "../public/images/works/Social-app.png";
 import webstudioImg from "../public/images/works/Webstudio.png";
 import soYummyImg from "../public/images/works/So-yummy-preview.jpg";
+import headphonesStoreImg from "../public/images/works/headphones-shop-sanity.jpg";
 
 import { StaticImageData } from "next/image";
 
@@ -25,6 +26,20 @@ export interface WorkI {
 }
 
 const works: WorkI[] = [
+  {
+    id: "headphones-shop",
+    title: "Headphones Shop",
+    description:
+      "A headphone store made with Next.js with Sanity and Stripe connected.",
+    fullDescription:
+      "Pet project. A headphone store built using Next.js with Sanity and Stripe connected, with the ability to make a test purchase.",
+    technologies: "Typescript, React, Next.js, Sanity, Stripe",
+    source: "https://github.com/Reqvite/Headphones-shop-sanity",
+    page: "https://headphones-shop-sanity.vercel.app/",
+    image: headphonesStoreImg,
+    bigPage: false,
+    teamProject: false,
+  },
   {
     id: "so-yummy",
     title: "So Yummy",
@@ -47,7 +62,7 @@ const works: WorkI[] = [
     description:
       "Phonebook made using the Chakra UI connected to the Swagger backend API (register, login, add, delete or filter contacts, log out).",
     fullDescription:
-      "Pet-project.Phonebook made using the Chakra UI connected to the Swagger backend API (register, login, add, delete or filter contacts, log out).",
+      "Pet-project. Phonebook made using the Chakra UI connected to the Swagger backend API (register, login, add, delete or filter contacts, log out).",
     technologies: "React (Hooks, Routers, Redux, Redux Toolkit)",
     source: "https://github.com/Reqvite/goit-react-hw-08-phonebook",
     page: "https://reqvite.github.io/goit-react-hw-08-phonebook/",
@@ -60,7 +75,7 @@ const works: WorkI[] = [
     description:
       "Social network is mobile application made using the React Native, Expo, and Firebase.",
     fullDescription:
-      "Pet-project.Social network is mobile application made using the React Native, Expo, Firebase (register, login,log out, add post, add profile image).",
+      "Pet-project. Social network is mobile application made using the React Native, Expo, Firebase (register, login,log out, add post, add profile image).",
     technologies: "React Native (Hooks, Routers, Redux, Redux Toolkit), Expo",
     source: "https://github.com/Reqvite/react-native-social-media-app",
     page: "https://expo.dev/@reqvite/react-native-pr",
@@ -86,7 +101,7 @@ const works: WorkI[] = [
     description:
       "Real-time chat using google authentication and firebase to store messages.",
     fullDescription:
-      "Pet-project.Real-time chat using google authentication and firebase to store messages.",
+      "Pet-project. Real-time chat using google authentication and firebase to store messages.",
     technologies: "React (Hooks, Routers)",
     source: "https://github.com/Reqvite/realtime-chat-react",
     page: "https://real-time-chat-01.netlify.app/chat-room",
@@ -98,7 +113,7 @@ const works: WorkI[] = [
     title: "Image search",
     description: "Image search site with infinite scroll using Pixabay API.",
     fullDescription:
-      "Pet-project.Image search site with infinite scroll using Pixabay API.",
+      "Pet-project. Image search site with infinite scroll using Pixabay API.",
     technologies: "HTML, SCSS, JS",
     source: "https://github.com/Reqvite/goit-js-hw-11",
     page: "https://reqvite.github.io/goit-js-hw-11/",
@@ -137,7 +152,7 @@ const works: WorkI[] = [
     description:
       "The website has a clean and simple design using basic HTML, SCSS and Javascript.",
     fullDescription:
-      "Pet-project.My first website has a clean and simple design using basic HTML, SCSS and Javascript.",
+      "Pet-project. My first website has a clean and simple design using basic HTML, SCSS and Javascript.",
     technologies: "HTML, SCSS, JS",
     source: "https://github.com/Reqvite/goit-markup-hw-08",
     page: "https://reqvite.github.io/goit-markup-hw-08/",
