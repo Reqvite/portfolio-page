@@ -55,7 +55,7 @@ const Works: FC<{ works: WorkI[] }> = ({ works }) => {
         <Heading as="h3" fontSize={25} textAlign="center" mb={5} mt="80px">
           Works
         </Heading>
-        <Flex justifyContent="center" mb={4}>
+        <Flex justifyContent="center" mb={4} flexWrap="wrap">
           {buttons.map(({ title, filter }) => (
             <Button
               key={title}
@@ -64,6 +64,7 @@ const Works: FC<{ works: WorkI[] }> = ({ works }) => {
               whileTap={{ scale: 0.95 }}
               onClick={() => setFilter(filter)}
               mr={2}
+              mt={2}
               bg="accentColor.100"
               variant="disabled"
             >

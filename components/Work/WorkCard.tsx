@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  Text,
   Box,
   Card,
   CardBody,
@@ -31,7 +32,8 @@ const WorkCard: FC<WorkI> = ({
             display="flex"
             flexDirection="column"
             alignItems="center"
-            width={isLargerThan560 ? "231px" : "300px"}
+            width="100%"
+            maxW={isLargerThan560 ? "231px" : "300px"}
             overflow="hidden"
           >
             <Image
@@ -59,20 +61,19 @@ const WorkCard: FC<WorkI> = ({
                   )}
                 </Box>
               </Flex>
-              <p
+              <Text
+                overflow="hidden"
+                textOverflow="ellipsis"
+                fontSize={16}
+                textAlign="center"
                 style={{
-                  display: "-webkit-box",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
                   WebkitLineClamp: 5,
                   WebkitBoxOrient: "vertical",
                   wordWrap: "break-word",
-                  fontSize: 16,
-                  textAlign: "center",
                 }}
               >
                 {description}
-              </p>
+              </Text>
             </Stack>
           </CardBody>
         </Card>
