@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { WorkI } from "@/data/works";
 import { HiUser, HiUserGroup } from "react-icons/hi2";
+import styled from "@emotion/styled";
 
 const WorkCard: FC<WorkI> = ({
   id,
@@ -36,21 +37,16 @@ const WorkCard: FC<WorkI> = ({
             maxW={isLargerThan560 ? "231px" : "300px"}
             overflow="hidden"
           >
-            <Image
+            <StyledImage
               quality={90}
               src={image}
               alt="Work preview"
               width="250"
               placeholder="blur"
-              style={{
-                borderRadius: "10px",
-                height: "120px",
-                objectFit: "cover",
-              }}
             />
             <Stack mt="6" spacing="3">
               <Flex alignSelf="center" alignItems="center">
-                <Heading as="h4" size="md" textAlign="center">
+                <Heading as="h3" fontSize="19px" textAlign="center">
                   {title}
                 </Heading>
                 <Box ml="5px">
@@ -61,19 +57,7 @@ const WorkCard: FC<WorkI> = ({
                   )}
                 </Box>
               </Flex>
-              <Text
-                overflow="hidden"
-                textOverflow="ellipsis"
-                fontSize={16}
-                textAlign="center"
-                style={{
-                  WebkitLineClamp: 5,
-                  WebkitBoxOrient: "vertical",
-                  wordWrap: "break-word",
-                }}
-              >
-                {description}
-              </Text>
+              <StyledText>{description}</StyledText>
             </Stack>
           </CardBody>
         </Card>
@@ -83,3 +67,20 @@ const WorkCard: FC<WorkI> = ({
 };
 
 export default WorkCard;
+
+const StyledImage = styled(Image)`
+  border-radius: 10px;
+  min-height: 130px;
+  object-fit: cover;
+`;
+
+const StyledText = styled(Text)`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+`;
