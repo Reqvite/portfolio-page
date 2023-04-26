@@ -30,9 +30,9 @@ const works: WorkI[] = [
     id: "headphones-shop",
     title: "Headphones Shop",
     description:
-      "A headphone store made with Next.js with Sanity and Stripe connected.",
+      "A headphone store made using Next.js, Sanity and Stripe connected.",
     fullDescription:
-      "Pet project. A headphone store built using Next.js with Sanity and Stripe connected, with the ability to make a test purchase.",
+      "Pet project. A headphone store made  Next.js, Sanity and Stripe, with the ability to make a test purchase.",
     technologies: "Typescript, React, Next.js, Sanity, Stripe",
     source: "https://github.com/Reqvite/Headphones-shop-sanity",
     page: "https://headphones-shop-sanity.vercel.app/",
