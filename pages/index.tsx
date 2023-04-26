@@ -18,7 +18,7 @@ const Home: FC = () => (
     <Head>
       <title>Home</title>
     </Head>
-    <Container>
+    <Container overflow="hidden">
       <Box display={{ md: "flex" }} mt="80px">
         <Box flexGrow={1}>
           <Heading as="h2" mb={3}>
