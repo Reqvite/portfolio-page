@@ -15,7 +15,7 @@ const AnimatedBackground: FC = () => {
   );
 
   return (
-    <Box position="absolute" zIndex="1">
+    <Box position="absolute">
       <Particles
         id="tsparticles"
         init={particlesInit}
