@@ -3,7 +3,7 @@ import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 const AnimatedBackground: FC = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -15,7 +15,7 @@ const AnimatedBackground: FC = () => {
   );
 
   return (
-    <Box position="relative" zIndex="-1">
+    <Box position="absolute" zIndex="1">
       <Particles
         id="tsparticles"
         init={particlesInit}

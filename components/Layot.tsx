@@ -3,6 +3,7 @@ import { Flex } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Footer from "./Footer";
 import Header from "./Header/Header";
+import AnimatedBackground from "@/components/ui/AnimatedBackground";
 import { variants } from "@/data/mainAnimationVariant";
 
 type layoutProps = {
@@ -12,6 +13,7 @@ type layoutProps = {
 
 const Layout: FC<layoutProps> = ({ children, router }) => (
   <>
+    <AnimatedBackground />
     <Flex minH="calc(100vh - 66px)" flexDirection="column">
       <Header />
       <AnimatePresence mode="wait">
