@@ -8,7 +8,7 @@ import { variants } from "@/data/mainAnimationVariant";
 
 type layoutProps = {
   children: ReactNode;
-  router: string;
+  router: any;
 };
 
 const Layout: FC<layoutProps> = ({ children, router }) => (
