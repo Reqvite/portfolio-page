@@ -7,6 +7,7 @@ type GlobalStylesProps = {
 const config: ThemeConfig = {
   initialColorMode: "system",
   useSystemColorMode: true,
+  disableTransitionOnChange: false,
 };
 
 const theme = extendTheme(
@@ -43,9 +44,7 @@ const theme = extendTheme(
     },
   },
   {
-    config: {
-      disableTransitionOnChange: false,
-    },
+    config,
   }
 );
 
