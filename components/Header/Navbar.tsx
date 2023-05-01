@@ -17,7 +17,10 @@ import ToggleThemeButton from "../ui/ToggleThemeButton";
 import { navigation } from "@/data/navigation";
 
 const Navbar: FC = () => {
-  const [isLargerThan560] = useMediaQuery("(min-width: 560px)");
+  const [isLargerThan560] = useMediaQuery("(min-width: 560px)", {
+    ssr: true,
+    fallback: true,
+  });
 
   return (
     <Box
