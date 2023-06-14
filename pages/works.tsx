@@ -12,25 +12,15 @@ import {
 } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Head from "next/head";
-import { FC, useState } from "react";
+import { useState } from "react";
 
-export const getStaticProps = async () => {
+ function getWorks () {
   const data = works;
 
-  if (!data) {
-    return {
-      notFound: true,
-    };
-  }
-
-  return {
-    props: {
-      works: data,
-    },
-  };
-};
-
-const Works: FC<{ works: WorkI[] }> = ({ works }) => {
+  return data
+}
+const Works =  () => {
+  const works =  getWorks()
   const [allWorks] = useState<WorkI[]>(works);
   const [filter, setFilter] = useState<any>("all");
   const [isLargerThan560] = useMediaQuery("(min-width: 560px)");

@@ -8,6 +8,7 @@ import socialappImg from "../public/images/works/Social-app.png";
 import webstudioImg from "../public/images/works/Webstudio.png";
 import soYummyImg from "../public/images/works/So-yummy-preview.jpg";
 import headphonesStoreImg from "../public/images/works/headphones-shop-sanity.jpg";
+import foodDelivery from '../public/images/works/Food-delivery.png'
 
 import { StaticImageData } from "next/image";
 
@@ -26,6 +27,22 @@ export interface WorkI {
 }
 
 const works: WorkI[] = [
+  {
+    id: "food-delivery",
+    title: "Food Delivery",
+    description:
+      "A Food delivery shop made using React, with the ability to make orders.The site also has Google maps with the ability to track the amount of departure time and a detailed route.",
+    fullDescription:
+      "Pet project. A Food delivery shop made using React, with the ability to make orders.The site also has Google maps with the ability to track the amount of departure time and a detailed route. The back-end part of the  project is responsible for handling server-side logic, data storage, and communication between the front-end and the database. It includes a database that stores all food information, and orders data.",
+      technologies:
+      "Frontend - React, React-router-dom, Redux Toolkit, Axios, Formik,React-hot-toast, SASS, React-google-recaptcha, React-google-maps/api. Backend - Node.js, Express, MongoDB, Mongoose, Joi",
+    source: "https://github.com/Reqvite/delivery-app",
+    backendSource: "https://github.com/Reqvite/delivery-api",
+    page: "https://req-food-delivery.netlify.app/",
+    image: foodDelivery,
+    bigPage: true,
+    teamProject: false,
+  },
   {
     id: "headphones-shop",
     title: "Headphones Shop",

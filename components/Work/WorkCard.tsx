@@ -43,6 +43,7 @@ const WorkCard: FC<WorkI> = ({
               alt="Work preview"
               width="250"
               placeholder="blur"
+              
             />
             <Stack mt="6" spacing="3">
               <Flex alignSelf="center" alignItems="center">
