@@ -44,20 +44,6 @@ const works: WorkI[] = [
     teamProject: false,
   },
   {
-    id: "headphones-shop",
-    title: "Headphones Shop",
-    description:
-      "A headphone store made using Next.js, Sanity and Stripe connected.",
-    fullDescription:
-      "Pet project. A headphone store made  Next.js, Sanity and Stripe, with the ability to make a test purchase.",
-    technologies: "Typescript, React, Next.js, Sanity, Stripe",
-    source: "https://github.com/Reqvite/Headphones-shop-sanity",
-    page: "https://headphones-shop-sanity.vercel.app/",
-    image: headphonesStoreImg,
-    bigPage: false,
-    teamProject: false,
-  },
-  {
     id: "so-yummy",
     title: "So Yummy",
     description:
@@ -84,6 +70,20 @@ const works: WorkI[] = [
     source: "https://github.com/Reqvite/goit-react-hw-08-phonebook",
     page: "https://reqvite.github.io/goit-react-hw-08-phonebook/",
     image: phonebookImg,
+    teamProject: false,
+  },
+    {
+    id: "headphones-shop",
+    title: "Headphones Shop",
+    description:
+      "A headphone store made using Next.js, Sanity and Stripe connected.",
+    fullDescription:
+      "Pet project. A headphone store made  Next.js, Sanity and Stripe, with the ability to make a test purchase.",
+    technologies: "Typescript, React, Next.js, Sanity, Stripe",
+    source: "https://github.com/Reqvite/Headphones-shop-sanity",
+    page: "https://headphones-shop-sanity.vercel.app/",
+    image: headphonesStoreImg,
+    bigPage: false,
     teamProject: false,
   },
   {
