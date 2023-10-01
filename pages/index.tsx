@@ -13,6 +13,7 @@ import { FC } from "react";
 import { motion } from "framer-motion";
 import SkillsBox from "@/components/SkillsBox";
 import profilePhoto from "../public/images/profile/profile.png";
+import EducationBox from "@/components/EducationBox";
 const Home: FC = () => (
   <>
     <Head>
@@ -87,6 +88,7 @@ const Home: FC = () => (
         </Box>
       </Box>
       <SkillsBox />
+      <EducationBox />
     </Container>
   </>
 );

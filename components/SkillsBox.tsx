@@ -14,7 +14,7 @@ import { CheckIcon, SettingsIcon } from "@chakra-ui/icons";
 const SkillsBox: FC = () => (
   <Box>
     <Heading as="h3" fontSize={25}>
-      Skills
+      Frontend skills
     </Heading>
     <Flex padding={5}>
       <List spacing={3}>
@@ -24,30 +24,26 @@ const SkillsBox: FC = () => (
         </ListItem>
         <ListItem>
           <ListIcon as={CheckIcon} color="green.500" />
-          CSS
+          CSS/SASS
         </ListItem>
         <ListItem>
           <ListIcon as={CheckIcon} color="green.500" />
-          SASS
+          Styled components
         </ListItem>
         <ListItem>
           <ListIcon as={CheckIcon} color="green.500" />
-          JavaScript
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckIcon} color="green.500" />
-          React
+          JavaScript / Typescript
         </ListItem>
       </List>
       <Spacer />
       <List spacing={3}>
         <ListItem>
           <ListIcon as={CheckIcon} color="green.500" />
-          Redux
+          React
         </ListItem>
         <ListItem>
           <ListIcon as={CheckIcon} color="green.500" />
-          Node.js
+          Redux
         </ListItem>
         <ListItem>
           <Tooltip label="In progress" aria-label="Typescript knowledge">
@@ -56,16 +52,54 @@ const SkillsBox: FC = () => (
           React native
         </ListItem>
         <ListItem>
-          <Tooltip label="In progress" aria-label="Typescript knowledge">
-            <ListIcon as={SettingsIcon} color="yellow.500" />
-          </Tooltip>
-          Typescript
-        </ListItem>
-        <ListItem>
           <Tooltip label="In progress" aria-label="Next.js knowledge">
             <ListIcon as={SettingsIcon} color="yellow.500" />
           </Tooltip>
           Next.js
+        </ListItem>
+      </List>
+    </Flex>
+    <Heading as="h3" fontSize={25}>
+      Backend skills
+    </Heading>
+    <Flex padding={5}>
+      <List spacing={3}>
+        <ListItem>
+          <ListIcon as={CheckIcon} color="green.500" />
+          Node.js
+        </ListItem>
+      </List>
+      <Spacer />
+      <List spacing={3}>
+        <ListItem>
+          <ListIcon as={CheckIcon} color="green.500" />
+          MongoDb
+        </ListItem>
+      </List>
+    </Flex>
+    <Heading as="h3" fontSize={25}>
+      Tools
+    </Heading>
+    <Flex padding={5}>
+      <List spacing={3}>
+        <ListItem>
+          <ListIcon as={CheckIcon} color="green.500" />
+          Webpack
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckIcon} color="green.500" />
+          Git
+        </ListItem>
+      </List>
+      <Spacer />
+      <List spacing={3}>
+        <ListItem>
+          <ListIcon as={CheckIcon} color="green.500" />
+          Storybook
+        </ListItem>
+        <ListItem>
+          <ListIcon as={CheckIcon} color="green.500" />
+          Swagger
         </ListItem>
       </List>
     </Flex>
