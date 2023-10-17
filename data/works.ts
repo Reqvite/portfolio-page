@@ -33,7 +33,7 @@ const works: WorkI[] = [
     description:
       "A Food delivery shop made using React, with the ability to make orders.The site also has Google maps with the ability to track the amount of departure time and a detailed route.",
     fullDescription:
-      "Pet project. A Food delivery shop made using React, with the ability to make orders.The site also has Google maps with the ability to track the amount of departure time and a detailed route. The back-end part of the  project is responsible for handling server-side logic, data storage, and communication between the front-end and the database. It includes a database that stores all food information, and orders data.",
+      "Pet project. A Food delivery shop made using React, with the ability to make orders.The site also has Google maps with the ability to track the amount of departure time, detailed route and Liqpay to accept payments. The back-end part of the  project is responsible for handling server-side logic, data storage, and communication between the front-end and the database. It includes a database that stores all food information, and orders data.",
       technologies:
       "Frontend - React, React-router-dom, Redux Toolkit, Axios, Formik,React-hot-toast, SASS, React-google-recaptcha, React-google-maps/api. Backend - Node.js, Express, MongoDB, Mongoose, Joi",
     source: "https://github.com/Reqvite/delivery-app",
