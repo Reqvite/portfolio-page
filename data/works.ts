@@ -38,7 +38,6 @@ const works: WorkI[] = [
       "Pet-project.Social network is mobile application made using the React Native, Expo, Firebase (register, login,log out, add post, add profile image).",
     technologies: "React Native (Hooks, Routers, Redux, Redux Toolkit), Expo",
     source: "https://github.com/Reqvite/m-social-2",
-    page: "QR codes for IOS,Android expo deploy",
     image: [{img:socialappImg, },{img:socialIos, text: 'iOS QR code'}, {img:socialAndroid, text: 'Android QR code'}, ],
     teamProject: false,
   },
