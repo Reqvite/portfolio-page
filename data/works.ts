@@ -5,6 +5,8 @@ import icecreamImg from "../public/images/works/Icecream.png";
 import barbershopImg from "../public/images/works/Barbershop.png";
 import imagesearchImg from "../public/images/works/imagesearch.png";
 import socialappImg from "../public/images/works/Social-app.png";
+import socialAndroid from "../public/images/works/android-social.svg";
+import socialIos from "../public/images/works/ios-social.svg";
 import webstudioImg from "../public/images/works/Webstudio.png";
 import soYummyImg from "../public/images/works/So-yummy-preview.jpg";
 import headphonesStoreImg from "../public/images/works/headphones-shop-sanity.jpg";
@@ -20,13 +22,26 @@ export interface WorkI {
   technologies: string;
   source: string;
   page: string;
-  image: StaticImageData;
+  image: {img:StaticImageData, text?:string}[];
   backendSource?: string;
   bigPage?: boolean;
   teamProject: boolean;
 }
 
 const works: WorkI[] = [
+    {
+    id: "social-network",
+    title: "Social network",
+    description:
+      "Social network is mobile application made using the React Native, Expo, and Firebase.",
+    fullDescription:
+      "Pet-project.Social network is mobile application made using the React Native, Expo, Firebase (register, login,log out, add post, add profile image).",
+    technologies: "React Native (Hooks, Routers, Redux, Redux Toolkit), Expo",
+    source: "https://github.com/Reqvite/m-social-2",
+    page: "QR codes for IOS,Android expo deploy",
+    image: [{img:socialappImg, },{img:socialIos, text: 'iOS QR code'}, {img:socialAndroid, text: 'Android QR code'}, ],
+    teamProject: false,
+  },
   {
     id: "food-delivery",
     title: "Food Delivery",
@@ -39,7 +54,7 @@ const works: WorkI[] = [
     source: "https://github.com/Reqvite/delivery-app",
     backendSource: "https://github.com/Reqvite/delivery-api",
     page: "https://req-food-delivery.netlify.app/",
-    image: foodDelivery,
+    image: [{img:foodDelivery, }],
     bigPage: true,
     teamProject: false,
   },
@@ -55,7 +70,7 @@ const works: WorkI[] = [
     source: "https://github.com/Reqvite/so-yummy-project",
     backendSource: "https://github.com/Reqvite/so-yummy-backend",
     page: "https://so-yummy.netlify.app",
-    image: soYummyImg,
+    image: [{img:soYummyImg, }],
     bigPage: true,
     teamProject: true,
   },
@@ -69,7 +84,7 @@ const works: WorkI[] = [
     technologies: "React (Hooks, Routers, Redux, Redux Toolkit)",
     source: "https://github.com/Reqvite/goit-react-hw-08-phonebook",
     page: "https://reqvite.github.io/goit-react-hw-08-phonebook/",
-    image: phonebookImg,
+    image: [{img:phonebookImg, }],
     teamProject: false,
   },
     {
@@ -82,21 +97,8 @@ const works: WorkI[] = [
     technologies: "Typescript, React, Next.js, Sanity, Stripe",
     source: "https://github.com/Reqvite/Headphones-shop-sanity",
     page: "https://headphones-shop-sanity.vercel.app/",
-    image: headphonesStoreImg,
+    image: [{img:headphonesStoreImg, }],
     bigPage: false,
-    teamProject: false,
-  },
-  {
-    id: "social-network",
-    title: "Social network",
-    description:
-      "Social network is mobile application made using the React Native, Expo, and Firebase.",
-    fullDescription:
-      "Pet-project. Social network is mobile application made using the React Native, Expo, Firebase (register, login,log out, add post, add profile image).",
-    technologies: "React Native (Hooks, Routers, Redux, Redux Toolkit), Expo",
-    source: "https://github.com/Reqvite/react-native-social-media-app",
-    page: "https://expo.dev/@reqvite/react-native-pr",
-    image: socialappImg,
     teamProject: false,
   },
   {
@@ -109,7 +111,7 @@ const works: WorkI[] = [
     technologies: "HTML, SASS, JS, REST API, AJAX, Parcel",
     source: "https://github.com/Reqvite/Filmoteka",
     page: "https://reqvite.github.io/Filmoteka/",
-    image: filmotekaImg,
+    image: [{img:filmotekaImg, }],
     teamProject: true,
   },
   {
@@ -122,7 +124,7 @@ const works: WorkI[] = [
     technologies: "React (Hooks, Routers)",
     source: "https://github.com/Reqvite/realtime-chat-react",
     page: "https://real-time-chat-01.netlify.app/chat-room",
-    image: realtimechatImg,
+    image: [{img:realtimechatImg, }],
     teamProject: false,
   },
   {
@@ -134,7 +136,7 @@ const works: WorkI[] = [
     technologies: "HTML, SCSS, JS",
     source: "https://github.com/Reqvite/goit-js-hw-11",
     page: "https://reqvite.github.io/goit-js-hw-11/",
-    image: imagesearchImg,
+    image: [{img:imagesearchImg, }],
     teamProject: false,
   },
   {
@@ -147,7 +149,7 @@ const works: WorkI[] = [
     technologies: "HTML, SCSS, JS",
     source: "https://github.com/Reqvite/barbershop",
     page: "https://reqvite.github.io/barbershop/",
-    image: barbershopImg,
+    image: [{img:barbershopImg, }],
     teamProject: false,
   },
   {
@@ -160,7 +162,7 @@ const works: WorkI[] = [
     technologies: "HTML, Parcel, SCSS, JS",
     source: "https://github.com/Reqvite/team-project-1",
     page: "https://reqvite.github.io/team-project-1/",
-    image: icecreamImg,
+    image: [{img:icecreamImg, }],
     teamProject: true,
   },
   {
@@ -173,7 +175,7 @@ const works: WorkI[] = [
     technologies: "HTML, SCSS, JS",
     source: "https://github.com/Reqvite/goit-markup-hw-08",
     page: "https://reqvite.github.io/goit-markup-hw-08/",
-    image: webstudioImg,
+    image: [{img:webstudioImg, }],
     teamProject: false,
   },
 ];

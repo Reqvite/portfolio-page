@@ -39,7 +39,7 @@ const WorkCard: FC<WorkI> = ({
           >
             <StyledImage
               quality={90}
-              src={image}
+              src={image[0].img}
               alt="Work preview"
               width="250"
               placeholder="blur"

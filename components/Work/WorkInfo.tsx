@@ -13,6 +13,8 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   Button,
+  Box,
+  Grid,
 } from "@chakra-ui/react";
 import { WorkI } from "@/data/works";
 
@@ -57,13 +59,12 @@ const WorkInfo: FC<WorkI> = ({
         <Text fontSize={16} textIndent="20px">
           {fullDescription}
         </Text>
-
-        <Link href={page} target="_blank">
+        {page && <Link href={page} target="_blank">
           <Badge bg="accentColor.100" mr={2}>
             Website:
           </Badge>
           {page}
-        </Link>
+        </Link>}
         <Link href={source} target="_blank">
           <Badge bg="accentColor.100" mr={2}>
             Source:
@@ -84,8 +85,10 @@ const WorkInfo: FC<WorkI> = ({
           </Badge>
           {technologies}
         </Text>
-        <Image
-          src={image.src}
+        {image.map((el, idx) => <Grid gap={5} justifyContent={'center'} key={idx}>
+          {el.text && <Text textAlign={'center'}>{el.text}</Text>}
+           <Image
+          src={el.img.src}
           alt="Website preview"
           borderRadius="5px"
           width="500"
@@ -93,8 +96,10 @@ const WorkInfo: FC<WorkI> = ({
           placeholder="blur"
           objectFit="cover"
           cursor="pointer"
-          onClick={() => window.open(image.src, "_blank")}
+          onClick={() => window.open(el.img.src, "_blank")}
         />
+        </Grid>)}
+       
       </Stack>
     </Container>
   );
